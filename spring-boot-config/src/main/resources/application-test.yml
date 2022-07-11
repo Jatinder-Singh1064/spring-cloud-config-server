@@ -1,0 +1,16 @@
+app:
+  name: My Test Config App
+  desc: Welcome to ${app.name}
+
+my:
+  greeting: Hello Everyone in Testing
+  list:
+    values: One,Two,Three
+
+db:
+  connection: "{testConnectionString: 'https://____', username: 'foo', password: 'pass'}"
+  host: 127.0.0.1
+  port: 2400
+
+#Actuator Endpoints Exposure
+management.endpoints.web.exposure.include: "*"

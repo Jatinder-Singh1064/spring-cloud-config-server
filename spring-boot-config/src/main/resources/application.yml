@@ -1,0 +1,27 @@
+app:
+   name: My Config App
+   desc: Welcome to ${app.name}
+
+my:
+  greeting: Hello Everyone
+  list:
+      values: One,Two,Three
+
+db:
+   connection: "{connectionString: 'https://____', username: 'foo', password: 'pass'}"
+   host: 127.0.0.1
+   port: 1200
+    
+#Actuator Endpoints Exposure
+management.endpoints.web.exposure.include: "*"
+
+#To activate Spring Profiles, use below -
+#spring:
+#     profiles:
+#          active: test
+
+
+#Path to connect to Spring Cloud - Config Server
+spring.config.import: configserver:http://localhost:8888
+
+spring.application.name: spring-boot-config
